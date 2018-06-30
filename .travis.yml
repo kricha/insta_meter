@@ -1,0 +1,17 @@
+language: python
+python:
+- 3.6
+#addons:
+#  apt:
+#    packages:
+#    - pandoc
+deploy:
+- provider: pypi
+  distributions: sdist bdist_wheel
+  user: al_kricha
+  password:
+    secure: Owo01QGwzEpVCbZM6ucoj97KpJ5vbtqC3kuSz9q/4Xvb+VxoeKci4oDuEQsba9AKJ7G2h6iCws8Yl0rPXYFkz7yBpenSlyEbpiJDyKtsWQDqNdWFaDJvp/vF6OgQE+gw8YXlwpTnmha8d4Y586k+d/Z6CWr8vZ2oZJen12iZbf8ESgY87UEl5Y883qJU4qNI3N0oe68pKNPyfcS4GoTQ6W9/fuEACDr1DHfJX3QKMnnwx4ZtWp/CKfyLyRoP1XJX8WH4W/ZgZyfnSKMmBC6W1Ve0K/1DnAvtsFMtWVqHhJUb+isKoZ+RhSfzdDIVPMf89G75t0kSWiURwGoED0ijAXkSq1GrzFEF/SByql7qcmZdOG/PvwAO5ZXsoSjEkPvSFrYhY9/iKTpG7iHwNBqVlxi9hColLf0mTkGlNZLgklS86JqfoH0/lb3glU+h7ALwyH9REbZRStTG6qx4Z30hlDBzjxX6GUzGEKFZu9JcVXjRNWPuNJWEo/y14840wbsngW8LHkVUO6T1+VwcIEqpiouGUj7UKEVSQH0SYTJxE7Gj+5PiRZgz4tu9GcmdRYeHFwNKPYUl1cwIKBrqMhpZYc/vIlAPMbTEvgtpUgdGNgObVSooH9rwvs0x0shRnA7O0edbrtosqP8sNvbAWur6w47FPXAT02QD1rxVJeCozVk=
+  on:
+    branch: master
+    tags: true
+script: nosetests

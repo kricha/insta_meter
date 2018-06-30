@@ -1,0 +1,1 @@
+recursive-include insta_meter/ *.py
